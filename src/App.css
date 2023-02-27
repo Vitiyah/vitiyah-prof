@@ -252,5 +252,29 @@ textarea {
 }
 
 .input-active {
-  border: 2px solid red;
+  border: 1px solid red;
+}
+
+.error-message-show {
+  color: red;
+}
+
+.error-message-hidden {
+  visibility: hidden;
+}
+
+.show-check {
+  color: greenyellow;
+}
+
+.hide-check {
+  display: none;
+}
+
+.show-times {
+  color: red;
+}
+
+.hide-times {
+  display: none;
 }

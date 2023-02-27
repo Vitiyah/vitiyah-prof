@@ -4,23 +4,59 @@ import { SiGmail } from "@react-icons/all-files/si/SiGmail";
 import { FaTelegramPlane } from "@react-icons/all-files/fa/FaTelegramPlane";
 import { FaUser } from "@react-icons/all-files/fa/FaUser";
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
+import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
+import { FaTimesCircle } from "@react-icons/all-files/fa/FaTimesCircle";
 import { useForm } from "@formspree/react";
 import { useState } from "react";
 
 export const Contact = () => {
   const [state, handleSubmit] = useForm("xnqydzww");
-  const [outline, setOutline] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [timesName, setTimesName] = useState(false);
+  const [checkName, setCheckName] = useState(false);
+  const [timesEmail, setTimesEmail] = useState(false);
+  const [checkEmail, setCheckEmail] = useState(false);
+  const [timesMessage, setTimesMessage] = useState(false);
+  const [checkMessage, setCheckMessage] = useState(false);
+  const [status, setStatus] = useState(false);
 
-  const handleOutline = (e) => {
+  const nameErrorFunc = (e) => {
     if (e.target.value === "") {
-      setOutline(true);
+      setNameError(true);
+      setTimesName(true);
+      setCheckName(false);
     } else {
-      setOutline(false);
+      setNameError(false);
+      setTimesName(false);
+      setCheckName(true);
     }
   };
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
+  const emailErrorFunc = (e) => {
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (e.target.value !== "" && e.target.value.match(mailformat)) {
+      setEmailError(false);
+      setTimesEmail(false);
+      setCheckEmail(true);
+    } else {
+      setEmailError(true);
+      setTimesEmail(true);
+      setCheckEmail(false);
+    }
+  };
+
+  const messageErrorFunc = (e) => {
+    if (e.target.value === "") {
+      setMessageError(true);
+      setTimesMessage(true);
+      setCheckMessage(false);
+    } else {
+      setMessageError(false);
+      setTimesMessage(false);
+      setCheckMessage(true);
+    }
   };
 
   return (
@@ -61,44 +97,124 @@ export const Contact = () => {
           </div>
         </div>
         <div className="contact-form flex flex-col justify-center w-full h-3/4">
-          <form
-            className="flex flex-col items-start"
-            action="https://formspree.io/f/xnqydzww"
-            method="POST"
-            onSubmit={handleSubmit}
-          >
+          <form className="flex flex-col items-start" onSubmit={handleSubmit}>
             <label>NAME</label>
             <div className="name flex items-center justify-center relative">
               <input
-                className={outline ? "input-active mb-8" : "mb-8"}
+                className={nameError ? "input-active mb-2" : "mb-2"}
                 type="text"
                 id="name"
-                onChange={handleChange}
+                onChange={nameErrorFunc}
               />
-              <FaUser className="absolute top-[25%] translate-y-[-25%] left-[3%]" />
+              <FaUser className="absolute left-[3%] top-[28%]" />
+              <div className="w-4 h-4 rounded-full">
+                <FaTimesCircle
+                  className={
+                    timesName
+                      ? "show-times absolute right-[6%] top-[27%]"
+                      : "hide-times"
+                  }
+                />
+              </div>
+              <div className="w-4 h-4 rounded-full">
+                <FaCheckCircle
+                  className={
+                    checkName
+                      ? "show-check absolute right-[6%] top-[27%]"
+                      : "hide-check"
+                  }
+                />
+              </div>
             </div>
+            <p
+              className={
+                nameError
+                  ? "text-xs mb-4 error-message-show"
+                  : "text-xs mb-4 error-message-hidden"
+              }
+            >
+              Name field is empty !
+            </p>
             <label>EMAIL</label>
             <div className="name flex items-center justify-center relative">
               <input
-                className="mb-8"
+                className={emailError ? "input-active mb-2" : "mb-2"}
                 type="email"
                 id="email"
-                onChange={handleChange}
+                onChange={emailErrorFunc}
               />
-              <AiOutlineMail className="absolute top-[25%] translate-y-[-25%] left-[3%]" />
+              <AiOutlineMail className="absolute left-[3%] top-[28%]" />
+              <div className="w-4 h-4 rounded-full">
+                <FaTimesCircle
+                  className={
+                    timesEmail
+                      ? "show-times absolute right-[6%] top-[27%]"
+                      : "hide-times"
+                  }
+                />
+              </div>
+              <div className="w-4 h-4 rounded-full">
+                <FaCheckCircle
+                  className={
+                    checkEmail
+                      ? "show-check absolute right-[6%] top-[27%]"
+                      : "hide-check"
+                  }
+                />
+              </div>
             </div>
+
+            <p
+              className={
+                emailError
+                  ? "text-xs mb-4 error-message-show"
+                  : "text-xs mb-4 error-message-hidden"
+              }
+            >
+              Email field is empty or invalid !
+            </p>
             <label>MESSAGE</label>
-            <textarea
-              name="message"
-              cols="80"
-              rows="5"
-              onChange={handleChange}
-            ></textarea>
+            <div className="textarea flex items-center justify-center relative">
+              <textarea
+                className={messageError ? "input-active mb-2" : "mb-2"}
+                name="message"
+                cols="80"
+                rows="5"
+                onChange={messageErrorFunc}
+              ></textarea>
+              <div className="w-4 h-4 rounded-full">
+                <FaTimesCircle
+                  className={
+                    timesMessage
+                      ? "show-times absolute right-[6%] top-[50%] translate-y-[-50%]"
+                      : "hide-times"
+                  }
+                />
+              </div>
+              <div className="w-4 h-4 rounded-full">
+                <FaCheckCircle
+                  className={
+                    checkMessage
+                      ? "show-check absolute right-[6%] top-[50%] translate-y-[-50%]"
+                      : "hide-check"
+                  }
+                />
+              </div>
+            </div>
+            <p
+              className={
+                messageError
+                  ? "text-xs mb-4 error-message-show"
+                  : "text-xs mb-4 error-message-hidden"
+              }
+            >
+              Message field is empty !
+            </p>
             <button
               type="submit"
               className="btne h-10 bg-white p-4 w-36 mt-8 border-white border-2 flex items-center justify-center"
             >
-              Hit me up <FaTelegramPlane className="ml-2" size={20} />
+              {status} <FaTelegramPlane className="ml-2" size={20} />
             </button>
           </form>
         </div>
