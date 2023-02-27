@@ -8,6 +8,8 @@ import { FaCheckCircle } from "@react-icons/all-files/fa/FaCheckCircle";
 import { FaTimesCircle } from "@react-icons/all-files/fa/FaTimesCircle";
 import { useForm } from "@formspree/react";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Contact = () => {
   const [state, handleSubmit] = useForm("xnqydzww");
@@ -20,7 +22,6 @@ export const Contact = () => {
   const [checkEmail, setCheckEmail] = useState(false);
   const [timesMessage, setTimesMessage] = useState(false);
   const [checkMessage, setCheckMessage] = useState(false);
-  const [status, setStatus] = useState(false);
 
   const nameErrorFunc = (e) => {
     if (e.target.value === "") {
@@ -35,7 +36,8 @@ export const Contact = () => {
   };
 
   const emailErrorFunc = (e) => {
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let mailformat =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (e.target.value !== "" && e.target.value.match(mailformat)) {
       setEmailError(false);
       setTimesEmail(false);
@@ -56,6 +58,17 @@ export const Contact = () => {
       setMessageError(false);
       setTimesMessage(false);
       setCheckMessage(true);
+    }
+  };
+
+  const successStatus = () => {
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let textarea = document.getElementById("textarea");
+    if (name.value === "" || email.value === "" || textarea.value === "") {
+      toast.error("Please fill out empty fields !");
+    } else {
+      toast.success("Your message was successfully submitted !");
     }
   };
 
@@ -163,7 +176,6 @@ export const Contact = () => {
                 />
               </div>
             </div>
-
             <p
               className={
                 emailError
@@ -176,6 +188,7 @@ export const Contact = () => {
             <label>MESSAGE</label>
             <div className="textarea flex items-center justify-center relative">
               <textarea
+                id="textarea"
                 className={messageError ? "input-active mb-2" : "mb-2"}
                 name="message"
                 cols="80"
@@ -212,13 +225,17 @@ export const Contact = () => {
             </p>
             <button
               type="submit"
+              id="submitbtn"
               className="btne h-10 bg-white p-4 w-36 mt-8 border-white border-2 flex items-center justify-center"
+              onClick={successStatus}
             >
-              {status} <FaTelegramPlane className="ml-2" size={20} />
+              Hit me up !
+              <FaTelegramPlane className="ml-2" size={20} />
             </button>
           </form>
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 };

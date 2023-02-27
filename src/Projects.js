@@ -2,7 +2,6 @@ import { data } from "./ProjectsData.js";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { HiArrowRight } from "@react-icons/all-files/hi/HiArrowRight";
 import { HiArrowLeft } from "@react-icons/all-files/hi/HiArrowLeft";
-import { handler } from "tailwind-scrollbar-hide";
 
 export const Projects = () => {
   const slideLeft = () => {
