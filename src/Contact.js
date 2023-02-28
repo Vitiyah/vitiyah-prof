@@ -76,16 +76,18 @@ export const Contact = () => {
     <>
       <section
         id="contact"
-        className="contact-container w-screen h-screen bg-zinc-900 flex items-center"
+        className="contact-container w-screen h-screen bg-zinc-900 grid grid-cols-2 justify-items-center max-lg:content-center max-md:grid-cols-1 max-lg:grid-cols-2"
       >
-        <div className="contact-info w-full h-3/4 p-48">
-          <h2 className="title">CONTACT</h2>
-          <h4 className="heading-white pt-4">Get in touch with me</h4>
-          <p className="pt-4">
+        <div className="contact-info w-full h-full p-48 max-md:p-8 max-lg:p-8">
+          <h2 className="title max-lg:mt-8">CONTACT</h2>
+          <h4 className="heading-white pt-4 max-md:text-[2.5rem] max-md:leading-[3rem]">
+            Get in touch with me
+          </h4>
+          <p className="pt-4 max-md:text-sm">
             Click on the icons to directly connect with me through the social
             media
           </p>
-          <div className="social-media pt-10 flex items-center gap-10">
+          <div className="social-media pt-10 flex items-center justify-start gap-10 max-sm:justify-center max-md:justify-start max-lg:justify-start">
             <a
               href="https://wa.me/+60108837406"
               target="_blank"
@@ -109,10 +111,13 @@ export const Contact = () => {
             </a>
           </div>
         </div>
-        <div className="contact-form flex flex-col justify-center w-full h-3/4">
-          <form className="flex flex-col items-start" onSubmit={handleSubmit}>
+        <div className="contact-form flex items-center justify-center w-full h-full">
+          <form
+            className="inner-form flex flex-col max-md:w-[90%] max-lg:w-[90%] max-xl:w-[90%]"
+            onSubmit={handleSubmit}
+          >
             <label>NAME</label>
-            <div className="name flex items-center justify-center relative">
+            <div className="name flex items-center justify-center relative w-full">
               <input
                 className={nameError ? "input-active mb-2" : "mb-2"}
                 type="text"
@@ -149,7 +154,7 @@ export const Contact = () => {
               Name field is empty !
             </p>
             <label>EMAIL</label>
-            <div className="name flex items-center justify-center relative">
+            <div className="name flex items-center justify-center relative w-full">
               <input
                 className={emailError ? "input-active mb-2" : "mb-2"}
                 type="email"
@@ -226,7 +231,7 @@ export const Contact = () => {
             <button
               type="submit"
               id="submitbtn"
-              className="btne h-10 bg-white p-4 w-36 mt-8 border-white border-2 flex items-center justify-center"
+              className="btne h-10 bg-white p-4 w-36 mt-4 border-white border-2 flex items-center justify-center max-md:mt-0"
               onClick={successStatus}
             >
               Hit me up !

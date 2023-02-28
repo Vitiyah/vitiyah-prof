@@ -28,13 +28,13 @@ export const Projects = () => {
         </div>
         <div
           id="slider"
-          className="projects-center w-full h-[700px] flex items-center flex-nowrap justify-between gap-8 px-8 mt-16 overflow-x-scroll scrollbar-hide scroll-smooth"
+          className="projects-center w-full h-[700px] flex items-center flex-nowrap justify-between gap-8 px-8 mt-4 overflow-x-scroll scrollbar-hide scroll-smooth"
         >
           {data.map((item, id) => {
             return (
               <div
                 key={id}
-                className="min-w-[400px] h-[600px] relative cursor-pointer"
+                className="min-w-[400px] h-[600px] relative cursor-pointer max-sm:min-w-[310px]"
               >
                 <img
                   className="w-full h-full rounded-lg"
