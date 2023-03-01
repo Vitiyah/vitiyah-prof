@@ -76,7 +76,7 @@ export const Contact = () => {
     <>
       <section
         id="contact"
-        className="contact-container w-screen h-screen bg-zinc-900 grid grid-cols-2 justify-items-center max-lg:content-center max-md:grid-cols-1 max-lg:grid-cols-2"
+        className="contact-container relative w-screen h-screen bg-zinc-900 grid grid-cols-2 justify-items-center max-lg:content-center max-md:grid-cols-1 max-lg:grid-cols-2"
       >
         <div className="contact-info w-full h-full p-48 max-md:p-8 max-lg:p-8">
           <h2 className="title max-lg:mt-8">CONTACT</h2>

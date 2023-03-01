@@ -14,7 +14,10 @@ import { FaFigma } from "@react-icons/all-files/fa/FaFigma";
 export const About = () => {
   return (
     <>
-      <section id="about" className="about-container h-screen w-screen flex">
+      <section
+        id="about"
+        className="about-container h-screen w-screen flex relative"
+      >
         <div className="about-img h-full w-1/3 flex items-center justify-center max-sm:hidden"></div>
         <div className="about-text h-full w-2/3 bg-zinc-900 p-20 max-sm:p-4 max-md:p-12 max-lg:p-16 max-sm:w-full ">
           <h2 className="title max-sm:text-center max-sm:mt-12 max-md:mt-4 max-lg:mt-4 max-xl:mt-4">

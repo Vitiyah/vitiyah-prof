@@ -17,12 +17,12 @@ export const Projects = () => {
     <>
       <section
         id="projects"
-        className="project-container h-screen w-screen relative"
+        className="project-container h-screen w-screen relative bg-slate-100"
       >
         <h2 className="title flex justify-center pt-16">PROJECTS</h2>
         <div
           onClick={slideLeft}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-500 absolute top-[55%] translate-y-[-55%] left-4 z-[100] cursor-pointer opacity-50 hover:opacity-100"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-500 absolute top-[50%] translate-y-[-50%] left-4 z-[100] cursor-pointer opacity-50 hover:opacity-100"
         >
           <HiArrowLeft />
         </div>
@@ -62,7 +62,7 @@ export const Projects = () => {
         </div>
         <div
           onClick={slideRight}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-500 absolute top-[55%] translate-y-[-55%] right-4 z-[100] cursor-pointer opacity-50 hover:opacity-100"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-500 absolute top-[50%] translate-y-[-50%] right-4 z-[100] cursor-pointer opacity-50 hover:opacity-100"
         >
           <HiArrowRight />
         </div>
