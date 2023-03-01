@@ -5,7 +5,7 @@ export const Home = () => {
     <>
       <section
         id="home"
-        className="home-container flex flex-col items-center justify-center pb-0 px-16 bg-rose-500 sticky top-0"
+        className="home-container flex flex-col items-center justify-center pb-0 px-16 bg-rose-500 sticky top-12"
       >
         <h1 className="big-heading max-[360px]:text-lg max-sm:text-2xl max-md:text-5xl max-lg:text-6xl max-xl:text-7xl">
           while(!(succeed = try() ));
