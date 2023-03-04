@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
-import { HiMenu } from "@react-icons/all-files/hi/HiMenu";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
