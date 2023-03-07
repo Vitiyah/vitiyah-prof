@@ -34,10 +34,10 @@ export const Projects = () => {
             return (
               <div
                 key={id}
-                className="min-w-[400px] h-[600px] relative cursor-pointer max-sm:min-w-[310px]"
+                className="min-w-[400px] h-[600px] relative cursor-pointer max-sm:min-w-[310px] bg-rose-400 rounded-lg"
               >
                 <img
-                  className="w-full h-full rounded-lg"
+                  className="w-[100%] h-[100%] rounded-lg"
                   src={item.image}
                   alt={item.title}
                 />

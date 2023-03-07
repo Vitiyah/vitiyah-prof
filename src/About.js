@@ -1,4 +1,4 @@
-import Degree from "./Degree.pdf";
+import Resume from "./resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaHtml5 } from "@react-icons/all-files/fa/FaHtml5";
 import { FaCss3 } from "@react-icons/all-files/fa/FaCss3";
@@ -27,8 +27,8 @@ export const About = () => {
             <h4 className="max-sm:text-sm">Download my</h4>
             <button className="resume-btn w-36 bg-rose-500 h-10 max-sm:w-24">
               <a
-                href={Degree}
-                download="Degree"
+                href={Resume}
+                download="Resume"
                 className="text-lg max-sm:text-sm"
               >
                 Resume <FontAwesomeIcon icon="download" />
