@@ -1,4 +1,5 @@
 import { HiOutlineArrowCircleRight } from "@react-icons/all-files/hi/HiOutlineArrowCircleRight";
+import { useState } from "react";
 
 export const Home = () => {
   return (
