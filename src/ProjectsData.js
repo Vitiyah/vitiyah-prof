@@ -1,4 +1,3 @@
-import logo from "./laptop.jpg";
 import netflix from "./netflix.jpg";
 import base from "./base.png";
 import huddle from "./huddle.png";
