@@ -1,4 +1,4 @@
-import Resume from "./resume.pdf";
+import Resume from "./Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaHtml5 } from "@react-icons/all-files/fa/FaHtml5";
 import { FaCss3 } from "@react-icons/all-files/fa/FaCss3";
