@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 940) {
+    if (window.scrollY >= 50) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -29,7 +29,7 @@ export const Navbar = () => {
   return (
     <nav
       id={navbar ? "active-navbar" : ""}
-      className="flex items-center justify-between sticky top-0 h-12 px-16 heading bg-rose-500 z-[100] w-full"
+      className="flex items-center justify-between sticky top-0 h-12 px-16 heading z-[100] w-full bg-zinc-900"
     >
       <h4 className="navbar-logo">VITIYAH MANIMARAN</h4>
       <div
@@ -59,7 +59,7 @@ export const Navbar = () => {
         </li>
         <li>
           <a className="a" href="#projects">
-            PROJECTS
+            WORK
           </a>
         </li>
         <li>

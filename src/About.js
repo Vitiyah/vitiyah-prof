@@ -16,16 +16,24 @@ export const About = () => {
     <>
       <section
         id="about"
-        className="about-container h-screen w-screen flex relative"
+        className="about-container h-screen w-screen flex flex-col relative bg-purple-300"
       >
-        <div className="about-img h-full w-1/3 flex items-center justify-center max-sm:hidden"></div>
-        <div className="about-text h-full w-2/3 bg-zinc-900 p-20 max-sm:p-4 max-md:p-12 max-lg:p-16 max-sm:w-full ">
-          <h2 className="title max-sm:text-center max-sm:mt-12 max-md:mt-4 max-lg:mt-4 max-xl:mt-4">
+        <div className="about-img h-[40%] w-full flex flex-col justify-start items-center bg-black">
+          <h2 className="about-title mt-12 max-sm:text-center max-sm:mt-12 max-sm:text-[6rem] max-md:mt-4 max-lg:mt-4 max-xl:mt-4">
             ABOUT
           </h2>
-          <div className="about-resume flex items-center justify-between w-60 mt-12 max-sm:w-44 max-md:mt-8 max-lg:mt-8 max-xl:mt-8">
+          <p className="about-intro text-center w-[80%] mt-2 max-sm:text-xs max-sm:leading-5 max-md:text-xs max-md:leading-6 max-lg:text-xs max-lg:leading-6 max-xl:text-sm max-xl:leading-6">
+            Hi, I am a self-taught creative frontend developer who enjoys
+            building websites and designing them. I am an ex-data analyst who
+            fell in love with web development. In future, I wish to continue my
+            passion and explore back-end technologies as well. I am a
+            self-driven person and have a keen eye for details
+          </p>
+        </div>
+        <div className="about-text h-[60%] w-full bg-zinc-900 p-4 pl-8 pr-8 max-sm:p-4 max-md:p-12 max-lg:p-16 max-sm:w-full">
+          <div className="about-resume flex items-center justify-between w-60 mt-8 max-sm:w-44">
             <h4 className="max-sm:text-sm">Download my</h4>
-            <button className="resume-btn w-36 bg-rose-500 h-10 max-sm:w-24">
+            <button className="resume-btn bg-purple-500 w-36 h-10 max-sm:w-24 rounded-full">
               <a
                 href={Resume}
                 download="Resume"
@@ -35,17 +43,8 @@ export const About = () => {
               </a>
             </button>
           </div>
-          <p className="about-intro mt-8 max-sm:text-xs max-sm:leading-5 max-md:text-xs max-md:leading-6 max-lg:text-xs max-lg:leading-6 max-xl:text-sm max-xl:leading-6">
-            I am a self-taught creative frontend developer and enjoy building
-            websites and designing them. I am an ex-data analyst that got
-            interested and want to build my career towards web development. In
-            coming years, I wish to continue my passion and explore back-end
-            technologies
-          </p>
-          <h3 className="mt-16 text-rose-500 max-sm:mt-8 max-md:mt-8 max-lg:mt-8 max-xl:mt-8">
-            MAIN SKILLS
-          </h3>
-          <div className="about-skills mt-8 grid grid-cols-3 gap-12 max-sm:gap-12 max-md:gap-4 max-md:text-xs max-lg:gap-4 max-lg:text-xs max-xl:gap-4 max-xl:text-sm max-2xl:text-sm max-2xl:gap-2">
+          <h3 className="mt-8 text-purple-500">MAIN SKILLS</h3>
+          <div className="about-skills mt-8 grid grid-cols-5 gap-4 max-md:text-xs max-lg:text-xs  max-xl:text-sm max-2xl:text-sm max-sm:text-[9px]">
             <li>HTML, CSS, JavaScript</li>
             <li>Frontend Development</li>
             <li>UI/UX Design</li>
@@ -56,10 +55,8 @@ export const About = () => {
             <li>JavaScript Libraries</li>
             <li>Git and GitHub</li>
           </div>
-          <h3 className="mt-16 text-rose-500 max-sm:mt-8 max-md:mt-8 max-lg:mt-8 max-xl:mt-8 max-2xl:mt-8">
-            TOOLS
-          </h3>
-          <div className="about-tools mt-16 flex items-center list-none gap-12 max-sm:gap-4 max-md:gap-4 max-xl:gap-4 max-2xl:gap-8">
+          <h3 className="mt-8 text-purple-500">TOOLS</h3>
+          <div className="about-tools mt-12 pb-16 flex items-center list-none justify-between">
             <li>
               <FaHtml5 className="tools-icon" />
             </li>

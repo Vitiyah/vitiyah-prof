@@ -78,8 +78,8 @@ export const Contact = () => {
         id="contact"
         className="contact-container relative w-screen h-screen bg-zinc-900 grid grid-cols-2 justify-items-center max-lg:content-center max-md:grid-cols-1 max-lg:grid-cols-2"
       >
-        <div className="contact-info w-full h-full p-48 max-md:p-8 max-lg:p-8">
-          <h2 className="title max-lg:mt-8">CONTACT</h2>
+        <div className="contact-info w-full h-full p-40 max-md:p-8 max-lg:p-8">
+          <h2 className="contact-title max-lg:mt-8">CONTACT</h2>
           <h4 className="heading-white pt-4 max-md:text-[2.5rem] max-md:leading-[3rem]">
             Get in touch with me
           </h4>
@@ -93,21 +93,21 @@ export const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaWhatsapp size={30} className="text-rose-500" />
+              <FaWhatsapp size={30} className="text-purple-500" />
             </a>
             <a
               href="https://www.linkedin.com/in/vitiyah-manimaran-405125157/"
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedin size={30} className="text-rose-500" />
+              <FaLinkedin size={30} className="text-purple-500" />
             </a>
             <a
               href="mailto:vitiyah95@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <SiGmail size={30} className="text-rose-500" />
+              <SiGmail size={30} className="text-purple-500" />
             </a>
           </div>
         </div>
