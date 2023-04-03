@@ -1,16 +1,18 @@
+import kanban from "./kanban.jpg";
+import airpods from "./airpods.jpg";
 import netflix from "./netflix.jpg";
-import base from "./base.png";
-import huddle from "./huddle.png";
-import social from "./social.png";
-import nft from "./nft.png";
-import interactive from "./interactive.png";
-import preview from "./preview.png";
+import rock from "./rock.jpg";
+import john from "./john.jpg";
+import backroads from "./backroads.jpg";
+import comfy from "./comfy.jpg";
+import wikipedia from "./wikipedia.jpg";
+import cocktail from "./cocktail.jpg";
 
 export const data = [
   {
     id: 1,
     title: "Kanban App (In Progress)",
-    image: netflix,
+    image: kanban,
     description:
       "An agile project management tool designed to help visualize work, limit work-in-progress, and maximize efficiency (or flow)",
     website: "https://kanban-task-management-vitiyah.netlify.app/",
@@ -19,6 +21,16 @@ export const data = [
   },
   {
     id: 2,
+    title: "AirPods",
+    image: airpods,
+    description:
+      "A semi functioning AirPods home page created using flip box animation concept",
+    website: "https://apple-clone-vitiyah.netlify.app/",
+    github: "https://github.com/Vitiyah/apple-clone.git",
+    language: ["ReactJS", "Tailwind", "API"],
+  },
+  {
+    id: 3,
     title: "Netflix Movie App",
     image: netflix,
     description:
@@ -28,73 +40,63 @@ export const data = [
     language: ["ReactJS", "Tailwind", "API"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Rock Paper Scissors Game",
-    image: netflix,
+    image: rock,
     description:
       "The familiar game of Rock, Paper, Scissors, two players display one of three symbols: a rock, paper, or scissors. A rock beats scissors, scissors beat paper by cutting it, and paper beats rock by covering it",
-    website: "https://rock-paper-scissors-vitiyah.netlify.app/",
+    website: "https://rock-paper-scissors-vitiyah.netlify.app",
     github: "https://github.com/Vitiyah/rock-paper-scissors-master.git",
     language: ["HTML", "CSS", "JS"],
   },
   {
-    id: 2,
-    title: "Base Apparel",
-    image: base,
-    description:
-      "A single page base apparel application created using HTML, CSS and JavaScript",
-    website: "https://base-apparel-vitiyah.netlify.app/",
-    github: "https://github.com/Vitiyah/base-apparel-coming-soon-master.git",
-    language: ["ReactJS", "Tailwind", "API"],
-  },
-  {
-    id: 3,
-    title: "Huddle",
-    image: huddle,
-    description:
-      "A single page Huddle landing page application using simple HTML and CSS",
-    website: "https://huddle-landing-page-vitiyah.netlify.app/",
-    github:
-      "https://github.com/Vitiyah/huddle-landing-page-with-single-introductory-section-master.git",
-    language: ["ReactJS", "Tailwind", "API"],
-  },
-  {
-    id: 4,
-    title: "Social Proof",
-    image: social,
-    description: "A single page social proof section using simple HTML and CSS",
-    website: "https://social-proof-section-vitiyah.netlify.app/",
-    github: "https://github.com/Vitiyah/social-proof-section-master.git",
-    language: ["ReactJS", "Tailwind", "API"],
-  },
-  {
     id: 5,
-    title: "NFT",
-    image: nft,
+    title: "Portfolio of John Doe",
+    image: john,
     description:
-      "A single page NFT preview card section using simple HTML, CSS and SASS",
-    website: "https://nft-preview-card-vitiyah.netlify.app/",
-    github: "https://github.com/Vitiyah/NFT-card.git",
-    language: ["ReactJS", "Tailwind", "API"],
+      "A simple portfolio webpage of John Doe created using basic frontend tools which contains information of John Doe",
+    website: "https://john-doe-portfolio.netlify.app/",
+    github: "https://github.com/Vitiyah/Portfolio-project.git",
+    language: ["HTML", "CSS", "JS"],
   },
   {
     id: 6,
-    title: "Interactive Rating",
-    image: interactive,
+    title: "Backroads Tour Company",
+    image: backroads,
     description:
-      "An interactive rating card component which functions through HTML, CSS and JavaScript",
-    website: "https://interactive-component-vitiyah.netlify.app/",
-    github: "https://github.com/Vitiyah/interactive-rating-component-main.git",
-    language: ["ReactJS", "Tailwind", "API"],
+      "A minimalistic yet informational and user-friendly backroads tour company's webpage application containing information of services and featured tours",
+    website: "https://backroads-tour-project-vitiyah.netlify.app/",
+    github: "https://github.com/Vitiyah/Backroads-Tour-Company-Project.git",
+    language: ["HTML", "CSS", "JS"],
   },
   {
     id: 7,
-    title: "3 column preview card",
-    image: preview,
-    description: "A 3 column preview card created using simple HTML and CSS",
-    website: "https://3-column-preview-card-vitiyah.netlify.app/",
-    github:
-      "https://github.com/Vitiyah/3-column-preview-card-component-main.git",
-    language: ["ReactJS", "Tailwind", "API"],
+    title: "Comfy Store",
+    image: comfy,
+    description:
+      "A minimalistic comfy store dual page which features home products and appliances - uses filter features",
+    website: "https://comfy-store-api-project.netlify.app",
+    github: "https://github.com/Vitiyah/29-comfy-store.git",
+    language: ["HTML", "CSS", "JS"],
+  },
+  {
+    id: 8,
+    title: "Wikipedia",
+    image: wikipedia,
+    description:
+      "A single Wikipedia clone page which uses the Wikipedia API and can search for information using the search button",
+    website: "https://wikipedia-vitiyah-api-project.netlify.app",
+    github: "https://github.com/Vitiyah/28-wikipedia.git",
+    language: ["HTML", "CSS", "JS", "API"],
+  },
+  {
+    id: 9,
+    title: "Cocktails",
+    image: cocktail,
+    description:
+      "A single page of Cocktails Selection which uses Cocktails API to provide cocktails' data to be featured on the webpage",
+    website: "https://cocktails-api-vitiyah-project.netlify.app",
+    github: "https://github.com/Vitiyah/24-cocktails.git",
+    language: ["HTML", "CSS", "JS", "API"],
   },
 ];

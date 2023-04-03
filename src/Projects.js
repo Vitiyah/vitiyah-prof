@@ -37,12 +37,12 @@ export const Projects = () => {
                 className="min-w-[500px] h-full relative cursor-pointer rounded-[50%] max-md:min-w-[400px]"
               >
                 <img
-                  className="w-[100%] h-[100%] rounded-full grayscale hover:invert "
+                  className="w-[100%] h-[100%] rounded-full grayscale"
                   src={item.image}
                   alt={item.title}
                 />
                 <div
-                  className="overlay w-full h-full bg-white opacity-10 hover:opacity-90 absolute top-0 left-0 rounded-[50%] flex flex-col 
+                  className="overlay w-full h-full bg-white opacity-0 hover:opacity-90 absolute top-0 left-0 rounded-[50%] flex flex-col 
                 items-center justify-center text-center p-8 transition-all ease-linear duration-200 text-black"
                 >
                   <h1 className="text-[2rem] max-md:text-[1rem] font-bold text-purple-500">
